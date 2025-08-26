@@ -138,3 +138,6 @@ FROM base AS final
 
 # Copy models from stage 2 to the final image
 COPY --from=downloader /comfyui/models /comfyui/models
+
+# Copy our custom POV video workflow into the container
+COPY wan_pov_video.json /comfyui/custom_nodes/wan_pov_video.json
